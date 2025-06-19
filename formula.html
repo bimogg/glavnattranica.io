@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ключевые формулы</title>
+<style>
+  /* Основные стили */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #eef4fc; /* Светло-синий фон */
+    color: #1a3b5d; /* Насыщенный синий цвет текста */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    line-height: 1.6;
+    overflow-y: auto;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Стили для header */
+  header {
+    display: flex; /* Включаем Flexbox */
+    justify-content: flex-start; /* Логотип и ссылки выравниваются слева */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    background: #d0e4f7; /* Светло-голубой фон */
+    padding: 20px 40px; /* Внутренние отступы */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    flex-wrap: wrap; /* Позволяем перенос элементов на новую строку */
+  }
+
+  /* Стили для логотипа */
+  header img {
+    height: 50px; /* Высота логотипа */
+    width: auto; /* Автоматическая ширина */
+    object-fit: contain; /* Сохраняем пропорции изображения */
+    margin-right: 20px; /* Отступ справа от логотипа */
+  }
+
+  /* Стили для навигации */
+  nav {
+    display: flex; /* Ссылки в одну строку */
+    gap: 15px; /* Расстояние между ссылками */
+    flex-wrap: wrap; /* Позволяем ссылкам переноситься на новую строку */
+  }
+
+  /* Стили для ссылок */
+  nav a {
+    display: inline-block; /* Ссылки отображаются как блоки */
+    color: #1a3b5d; /* Основной цвет текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    font-size: 18px; /* Размер текста */
+    padding: 5px 10px; /* Внутренние отступы */
+    border-radius: 5px; /* Скруглённые углы */
+    transition: all 0.3s ease; /* Плавный переход для всех изменений */
+  }
+
+  /* Эффект свечения при наведении */
+  nav a:hover {
+    color: #ffffff; /* Цвет текста становится белым */
+    background-color: #3b6b9e; /* Добавляем фон при наведении */
+    text-shadow: 0 0 10px #3b6b9e, 0 0 20px #3b6b9e; /* Эффект свечения */
+    transform: scale(1.1); /* Лёгкое увеличение ссылки */
+    box-shadow: 0 4px 15px rgba(59, 107, 158, 0.5); /* Тень для ссылки */
+  }
+
+  /* Основной контент */
+  main {
+    flex-grow: 1;
+    max-width: 1200px; /* Ограничение ширины */
+    margin: 0 auto; /* Центрирование содержимого */
+    padding: 40px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1a3b5d;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2b4f7a;
+    border-bottom: 3px solid #a3c8e8;
+    padding-bottom: 8px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #1a3b5d;
+  }
+
+  ul {
+    max-width: 100%;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: #1a3b5d;
+  }
+
+  ul > li {
+    margin-bottom: 10px;
+  }
+
+  ul > li > strong {
+    color: #2b4f7a;
+  }
+
+  .formula {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #f4f8fc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <!-- Логотип -->
+  <img src="aitu-logo-3.png" alt="Логотип АИТУ" />
+
+  <!-- Навигация -->
+  <nav>
+    <a href="facti.html">Интересные факты</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Ключевые формулы</h1>
+
+  <section style="background:#d9e9f8; padding:30px; border-radius:18px; margin-bottom:50px;">
+    <h2>Основные формулы дифференциального исчисления</h2>
+    <ul>
+      <li><strong>Производная функции:</strong> <span class="formula">f'(x) = lim(h→0) [f(x+h) - f(x)] / h</span></li>
+      <li><strong>Производная суммы:</strong> <span class="formula">(f(x) + g(x))' = f'(x) + g'(x)</span></li>
+      <li><strong>Производная произведения:</strong> <span class="formula">(f(x) * g(x))' = f'(x) * g(x) + f(x) * g'(x)</span></li>
+      <li><strong>Производная частного:</strong> <span class="formula">(f(x) / g(x))' = [f'(x) * g(x) - f(x) * g'(x)] / [g(x)]²</span></li>
+    </ul>
+  </section>
+
+  <section style="background:#d9e9f8; padding:30px; border-radius:18px; margin-bottom:50px;">
+    <h2>Основные формулы интегрального исчисления</h2>
+    <ul>
+      <li><strong>Неопределённый интеграл:</strong> <span class="formula">∫f'(x) dx = f(x) + C</span></li>
+      <li><strong>Определённый интеграл:</strong> <span class="formula">∫[a, b] f(x) dx = F(b) - F(a)</span></li>
+      <li><strong>Интеграл степенной функции:</strong> <span class="formula">∫xⁿ dx = (xⁿ⁺¹) / (n+1) + C, n ≠ -1</span></li>
+    </ul>
+  </section>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <a href="index.html" style="
+      display: inline-block;
+      background-color: #3b6b9e;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: all 0.3s ease; /* Плавный переход для всех изменений */
+    " onmouseover="this.style.transform='scale(1.1)'; this.style.backgroundColor='#2a4f7a';" 
+       onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='#3b6b9e';">
+      Вернуться на главную
+    </a>
+  </div>
+</main>
+
+</body>
+</html>
